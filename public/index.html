@@ -1,13 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Mini Ecommerce</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <main>
+        <h1>Mini Ecommerce</h1>
+        <nav>
+            <section>
+                <input id="search" type="search" placeholder="Buscar produto">
+                <select id="category"></select>
+            </section>
+            <button id="btnRender">Renderizar</button>
+        </nav>
+        <div id="product-list" class="product-list"></div>
+    </main>
+
+    <div id="product-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button type="button" class="modal-close" aria-label="Fechar detalhes" data-close-modal>×</button>
+            <div id="modal-body"></div>
+        </section>
+    </div>
 </body>
+
 </html>
